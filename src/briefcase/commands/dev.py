@@ -150,12 +150,12 @@ class DevCommand(RunAppMixin, BaseCommand):
         )
 
         # Start streaming logs for the app.
-        self._stream_app_logs(
-            app,
-            popen=app_popen,
-            test_mode=test_mode,
-            clean_output=False,
-        )
+        # self._stream_app_logs(
+        #     app,
+        #     popen=app_popen,
+        #     test_mode=test_mode,
+        #     clean_output=False,
+        # )
 
     def get_environment(self, app, test_mode: bool):
         # Create a shell environment where PYTHONPATH points to the source
