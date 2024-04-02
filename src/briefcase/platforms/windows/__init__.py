@@ -143,8 +143,8 @@ class WindowsRunCommand(RunCommand):
             [self.binary_path(app)] + passthrough,
             cwd=self.tools.home_path,
             encoding="UTF-8",
-            stdout=subprocess.PIPE,
-            stderr=subprocess.STDOUT,
+            # stdout=subprocess.PIPE,
+            # stderr=subprocess.STDOUT,
             bufsize=1,
             **kwargs,
         )
