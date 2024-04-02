@@ -144,7 +144,7 @@ class DevCommand(RunAppMixin, BaseCommand):
             env=env,
             encoding="UTF-8",
             cwd=self.tools.home_path,
-            stdout=subprocess.PIPE,
+            # stdout=subprocess.PIPE,
             stderr=subprocess.STDOUT,
             bufsize=1,
         )
