@@ -52,7 +52,7 @@ class WindowsAppBuildCommand(WindowsAppMixin, BuildCommand):
 
         :param app: The config object for the app
         """
-        self.logger.info("Building App...", prefix=app.app_name)
+        self.logger.info("Building SMApp...", prefix=app.app_name)
 
         if hasattr(self.tools, "windows_sdk"):
             # If an app has been packaged and code signed previously, then the digital
