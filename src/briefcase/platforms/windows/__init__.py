@@ -139,15 +139,16 @@ class WindowsRunCommand(RunCommand):
         kwargs = self._prepare_app_env(app=app, test_mode=test_mode)
 
         # Start the app in a way that lets us stream the logs
-        app_popen = self.tools.subprocess.Popen(
-            [self.binary_path(app)] + passthrough,
-            cwd=self.tools.home_path,
-            encoding="UTF-8",
-            stdout=subprocess.STDOUT,
-            stderr=subprocess.STDOUT,
-            bufsize=1,
-            **kwargs,
-        )
+        # app_popen = self.tools.subprocess.Popen(
+        #     [self.binary_path(app)] + passthrough,
+        #     cwd=self.tools.home_path,
+        #     encoding="UTF-8",
+        #     stdout=subprocess.STDOUT,
+        #     stderr=subprocess.STDOUT,
+        #     bufsize=1,
+        #     **kwargs,
+        # )
+        raise Exception("Not implemented")
 
         # Wait for the app to complete
         app_popen.wait()
