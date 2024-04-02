@@ -311,6 +311,8 @@ class RunCommand(RunAppMixin, BaseCommand):
 
         self.verify_app(app)
 
+        print("Hello, stdout?")
+
         state = self.run_app(
             app,
             test_mode=test_mode,
