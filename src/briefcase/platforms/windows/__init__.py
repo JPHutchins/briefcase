@@ -135,6 +135,8 @@ class WindowsRunCommand(RunCommand):
         :param test_mode: Boolean; Is the app running in test mode?
         :param passthrough: The list of arguments to pass to the app
         """
+        print("Running WindowsRunCommand.run_app")
+
         # Set up the log stream
         kwargs = self._prepare_app_env(app=app, test_mode=test_mode)
 
