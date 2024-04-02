@@ -138,8 +138,6 @@ class WindowsRunCommand(RunCommand):
         # Set up the log stream
         kwargs = self._prepare_app_env(app=app, test_mode=test_mode)
 
-        print("starting app...")
-
         # Start the app in a way that lets us stream the logs
         app_popen = self.tools.subprocess.Popen(
             [self.binary_path(app)] + passthrough,
