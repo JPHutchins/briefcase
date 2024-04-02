@@ -151,6 +151,8 @@ class WindowsRunCommand(RunCommand):
 
         # Wait for the app to complete
         app_popen.wait()
+        import time
+        time.sleep(2)
 
         # Start streaming logs for the app.
         # self._stream_app_logs(
