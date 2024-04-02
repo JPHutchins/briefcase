@@ -262,6 +262,9 @@ class RunCommand(RunAppMixin, BaseCommand):
         passthrough: list[str] | None = None,
         **options,
     ) -> dict | None:
+        
+        print("hello, stdout?")
+
         # Which app should we run? If there's only one defined
         # in pyproject.toml, then we can use it as a default;
         # otherwise look for a -a/--app option.
