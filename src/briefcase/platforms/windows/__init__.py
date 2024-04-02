@@ -143,19 +143,22 @@ class WindowsRunCommand(RunCommand):
             [self.binary_path(app)] + passthrough,
             cwd=self.tools.home_path,
             encoding="UTF-8",
-            stdout=subprocess.PIPE,
+            stdout=subprocess.STDOUT,
             stderr=subprocess.STDOUT,
             bufsize=1,
             **kwargs,
         )
 
+        # Wait for the app to complete
+        app_popen.wait()
+
         # Start streaming logs for the app.
-        self._stream_app_logs(
-            app,
-            popen=app_popen,
-            test_mode=test_mode,
-            clean_output=False,
-        )
+        # self._stream_app_logs(
+        #     app,
+        #     popen=app_popen,
+        #     test_mode=test_mode,
+        #     clean_output=False,
+        # )
 
 
 class WindowsPackageCommand(PackageCommand):
